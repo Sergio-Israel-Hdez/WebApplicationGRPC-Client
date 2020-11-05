@@ -1,0 +1,12 @@
+﻿@model GrpcServiceRentMovie.UsuarioProto
+@{
+    ViewData["Title"] = "Detalle";
+}
+<div class="card" style="width: 18rem;">
+    <h1 class="display-4">Información.</h1>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.Nombre</li>
+        <li class="list-group-item">@Model.Email</li>
+        <li class="list-group-item">@Model.Estado</li>
+    </ul>
+</div>

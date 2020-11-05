@@ -1,0 +1,24 @@
+﻿@model GrpcServiceRentMovie.UsuariosProto
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model.Items)
+        {
+
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Nombre @item.Apellido</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="btn btn-info" asp-action="Detalle" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-secondary" asp-action="Modificar" asp-route-id="@item.Id">Modificar</a>
+                        <a class="btn btn-danger" asp-action="Eliminar" asp-route-id="@item.Id">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
